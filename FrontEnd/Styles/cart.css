@@ -1,0 +1,71 @@
+body {
+  font-family: "Lato";
+}
+th,
+td {
+  padding: 20px;
+  background: white;
+}
+.imgAndNameDiv {
+  display: flex;
+}
+.productImg {
+  width: 100px;
+  height: 100px;
+}
+.title {
+  padding-left: 7px;
+  padding-top: 25px;
+}
+.Delete {
+  padding-left: 7px;
+  font-weight: bold;
+  cursor: pointer;
+
+  padding: 0px 5px 10px 20px;
+  margin-top: 40px;
+}
+table {
+  margin: auto;
+}
+.shoppingBag {
+  text-align: center;
+}
+.checkoutDiv {
+  display: flex;
+  justify-content: space-around;
+}
+h3 {
+  display: inline-block;
+  font-size: 25px;
+}
+
+/* .shoppay > img {
+    width: 20%;
+    border-radius: 10px;
+  } */
+
+.continue {
+  height: 40px;
+  font-weight: bold;
+  color: #f0f0f0;
+  background: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.proceed {
+  height: 40px;
+  font-weight: bold;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  background: #ffc439;
+  cursor: pointer;
+}
+.secure {
+  color: gray;
+}
+a {
+  text-decoration: none;
+}

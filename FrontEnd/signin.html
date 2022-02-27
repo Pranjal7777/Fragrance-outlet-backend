@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/signin1.css" />
+  </head>
+  <body>
+    <div class="container-log">
+      <form action="">
+        <div id="upper-log">
+          <div id="middle-log">
+            <div id="lower-log">
+              <h2>PLEASE SIGN IN</h2>
+              <input type="text" placeholder="Email" id="email" /><br />
+              <input type="text" placeholder="Password" id="password" /><br />
+              <h3 class="left">Forget your Password ?</h3>
+              <input type="submit" class="login-form" placeholder="CONTINUE" />
+              <!-- <button>CONTINUE</button> -->
+
+              <br />
+              <h2>Don't have an Account ?</h2>
+              <button onclick="myFunction()" id="btn">REGISTER NOW</button>
+              <h3><u>Terms of use </u> & <u> Privacy Policy</u></h3>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  function myFunction() {
+    window.location.href = "./register.html";
+  }
+
+  document
+    .querySelector(".registration-form")
+    .addEventListener("submit", login);
+
+  async function login(e) {
+    e.preventDefault();
+
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+
+    const result = await fetch(
+      "https://pranjal777apinodejs.herokuapp.com/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    ).then((res) => res.json());
+    if (result.status == "ok") {
+      window.location.href = "./productHome.html";
+    } else {
+      alert("email or password is invalid");
+    }
+    console.log(result);
+  }
+
+  //login
+
+  document.querySelector(".login-form").addEventListener("submit", login);
+
+  async function login(e) {
+    e.preventDefault();
+
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+
+    const result = await fetch(
+      "https://pranjal777apinodejs.herokuapp.com/login",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      }
+    ).then((res) => res.json());
+    if (result.status == "ok") {
+      window.location.href = "./productHome.html";
+    } else {
+      alert("email or password is invalid");
+    }
+    console.log(result);
+  }
+</script>

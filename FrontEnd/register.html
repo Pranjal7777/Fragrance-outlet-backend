@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/register1.css" />
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div id="upper">
+        <div id="middle">
+          <div id="lower">
+            <form class="registration-form">
+              <h2>CREATE ACCOUNT</h2>
+              <input type="text" placeholder="First Name" id="first" /><br />
+              <input type="text" placeholder="Last Name" id="last" /><br />
+              <input type="text" placeholder="Email" id="email" /><br />
+              <input
+                type="password"
+                placeholder="Password"
+                id="password"
+              /><br /><br />
+              <button id="btn2">CREATE AN ACCOUNT</button>
+               <!-- <input id="four" type="text"placeholder="CREATE AN ACCOUNT"/><br />  -->
+              <h2>Already have an Account ?</h2>
+              <button onclick="myFunction()" id="btn">Sign in Here</button>
+              <h3><u>Terms of use </u> & <u> Privacy Policy</u></h3>
+            </form>
+          </div>
+        </div>
+      </div>
+     
+          <!-- <span >Sign in</span> -->
+        </div>
+      </form> 
+    </div>
+  </body>
+</html>
+<script>
+  function myFunction() {
+window.location.href="./signin.html"
+}
+
+  document
+    .querySelector(".registration-form")
+    .addEventListener("submit", registerUser);
+
+  async function registerUser(e) {
+    e.preventDefault();
+
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+
+    console.log(email,password)
+
+    const result = await fetch("https:/pranjal077apinodejs.herokuapp.com/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    }).then((res) => res.json());
+    console.log(result);
+
+  }
+</script>

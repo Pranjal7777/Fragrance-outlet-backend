@@ -1,0 +1,150 @@
+body {
+  font-family: "Lato";
+}
+.men {
+  /* border: 1px solid black; */
+  text-align: center;
+  background: #f8f8f8;
+  font-weight: bold;
+
+  padding: 10px;
+}
+.filterAndProduct {
+  margin-top: 10px;
+  /* border: 1px solid black; */
+  display: flex;
+  height: auto;
+}
+.sidebar {
+  /* border: 1px solid black; */
+  flex: 0.9;
+  color: #4d484a;
+  margin-left: 2%;
+}
+.productDiv {
+  /* border: 1px solid black; */
+  flex: 3;
+  height: 430px;
+  margin-top: 7px;
+}
+.productDiv:hover {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.sortBy {
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  background: #f8f8f8;
+  height: 45px;
+}
+select {
+  width: 170px;
+  height: 25px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.products {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: auto;
+  margin-top: 15px;
+}
+.productImg {
+  width: 70%;
+  height: 200px;
+  padding-left: 15%;
+}
+.productImg,
+.title,
+.price,
+.discount,
+.mix,
+.add {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.discount,
+.mix {
+  color: red;
+  font-weight: bold;
+  line-height: 10%;
+  padding-bottom: 10%;
+}
+.discount {
+  font-variant: small-caps;
+}
+.searchlogo {
+  width: 7%;
+
+  /* border: 1px solid black; */
+  padding: 7px;
+}
+.brand,
+.gender,
+.types,
+.filterby {
+  color: black;
+}
+.prores {
+  top: 0px;
+  padding-top: 0px;
+  line-height: 60%;
+  padding-left: 10px;
+}
+.bannerImg {
+  padding-left: 10px;
+}
+
+/* .carousal {
+    padding: 10px;
+  } */
+.carousal > img {
+  width: 100%;
+}
+
+.rating > img {
+  width: 100%;
+}
+.rating {
+  margin-top: 15px;
+}
+.productsDiv {
+  margin-left: 4%;
+}
+.Women,
+.Men,
+.Menclothing,
+.Womenclothing,
+.elect,
+.jewelery,
+.add {
+  cursor: pointer;
+}
+/* 
+@media only screen and (min-width: 376) and (min-width: 760px) {
+  .header,
+  .men,
+  .sidebar {
+    display: none;
+  }
+
+  .filterAndProduct {
+    display: none;
+  }
+} */
+
+.add {
+  margin: auto;
+  border: 1px solid black;
+  width: 80px;
+  height: 30px;
+  background: #267ab5;
+  font-weight: bold;
+  color: white;
+  line-height: 0px;
+  margin-top: 0%;
+  margin-left: 35%;
+  margin-top: 20px;
+}

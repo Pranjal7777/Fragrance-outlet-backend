@@ -1,0 +1,67 @@
+.mainContainer {
+  position: relative;
+  margin-top: -425px;
+}
+.container-reg {
+  display: none;
+  position: absolute;
+  margin-top: 470px;
+  margin-left: 300px;
+}
+#upper-reg {
+  width: 740px;
+  height: 650px;
+  border: 2px solid transparent;
+  margin: auto;
+  margin-top: 100px;
+  background-image: url(../images/signup_bg.jpg);
+}
+
+#middle {
+  width: 620px;
+  height: 550px;
+  border: 2px solid transparent;
+  margin: auto;
+  margin-top: 50px;
+  /* background-image: url(./1556608.jpg);
+    transform: translate(50% -50%); */
+  background: rgba(255, 255, 255, 0.8);
+}
+#lower {
+  width: 600px;
+  height: 350px;
+  border: 2px solid transparent;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+#lower input {
+  padding: 12px 120px;
+  border: 1px solid black;
+  margin-top: 10px;
+  text-align: center;
+}
+#lower #btn {
+  padding: 12px 160px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+#lower #four {
+  background-color: black;
+  color: white;
+  font-weight: 600px bold;
+  font-size: 18px;
+  padding: 12px 95px;
+}
+#lower #btn {
+  font-weight: 10px bold;
+  padding: 12px 145px;
+}
+#btn2 {
+  color: white;
+  padding: 12px 135px;
+  background-color: black;
+  font-weight: 600;
+}
